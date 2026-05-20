@@ -1,0 +1,31 @@
+### GET request to example server
+GET http://localhost:8080
+
+###
+GET http://localhost:8080/api/v1/software-engineer
+
+###
+GET http://localhost:8080/events
+
+###
+GET http://localhost:8080/events/1
+
+
+###
+POST http://localhost:8080/events
+Content-Type:application/json
+
+{"id": 4,"name":"saksham","venue":"elho","availableSeats":10}
+
+###
+DELETE http://localhost:8080/events/1
+
+###
+PUT http://localhost:8080/events/3
+content-type:application/json
+
+{"id": 3,
+  "name": "Tanishq",
+  "venue": "Delhi",
+  "availableSeats": 200
+}
