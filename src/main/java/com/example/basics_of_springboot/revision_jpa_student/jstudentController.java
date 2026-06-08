@@ -1,5 +1,6 @@
 package com.example.basics_of_springboot.revision_jpa_student;
 
+import jakarta.validation.Valid;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
@@ -33,14 +34,14 @@ public class jstudentController {
     }
 
     @PostMapping("/addnewstudent")
-    public ResponseEntity<jstudent> addnewstudent(@RequestBody jstudent s){
+    public ResponseEntity<jstudent> addnewstudent(@Valid @RequestBody jstudent s){
         jstudent newstudent=studservice.createstudent(s);
             return ResponseEntity.status(201).body(newstudent);
 
     }
 
     @PutMapping("/updatestudent/{id}")
-    public ResponseEntity<jstudent> updatestudent(@PathVariable Long id,@RequestBody jstudent s){
+    public ResponseEntity<jstudent> updatestudent(@PathVariable Long id, @Valid @RequestBody jstudent s){
         jstudent updated=studservice.updatestudent(id,s);
         return ResponseEntity.status(200).body(updated);
     }

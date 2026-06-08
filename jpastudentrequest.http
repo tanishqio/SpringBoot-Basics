@@ -34,4 +34,14 @@ GET http://localhost:8080/getstudentbyid/4
 ###
 
 DELETE http://localhost:8080/deletestudentbyid/3
+###
+
+POST http://localhost:8080/addnewstudent
+content-type:application/json
+
+{
+  "name": "",
+  "mail": "",
+  "age": 2
+}
 
