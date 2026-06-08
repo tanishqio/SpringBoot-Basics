@@ -1,4 +1,4 @@
-package com.example.basics_of_springboot;
+package com.example.basics_of_springboot.softwareengineer;
 
 import java.util.Objects;
 
